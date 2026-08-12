@@ -1,0 +1,594 @@
+[
+  {
+    "id_kecamatan": 1,
+    "label_cluster": 1,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Kerajinan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 280.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 268.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Jasa",
+        "nilai": 68.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Kerajinan",
+        "nilai": 51.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 35.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 2,
+    "label_cluster": 1,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Kerajinan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 193.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 185.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Jasa",
+        "nilai": 47.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Kerajinan",
+        "nilai": 35.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 24.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 3,
+    "label_cluster": 1,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Kerajinan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 120.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 115.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Jasa",
+        "nilai": 29.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Kerajinan",
+        "nilai": 22.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 15.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 4,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Kerajinan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 68.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Kerajinan",
+        "nilai": 19.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Makanan",
+        "nilai": 18.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 8.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 2.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 5,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Kerajinan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 45.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Kerajinan",
+        "nilai": 14.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Makanan",
+        "nilai": 12.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 5.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 2.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 6,
+    "label_cluster": 3,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 420.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 160.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 98.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 47.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 22.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 7,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Kerajinan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 85.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Kerajinan",
+        "nilai": 25.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Makanan",
+        "nilai": 22.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 10.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 3.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 8,
+    "label_cluster": 3,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 510.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 195.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 118.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 57.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 27.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 9,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 315.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 57.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 51.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 47.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 17.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 10,
+    "label_cluster": 4,
+    "interpretasi": "Dominan Kerajinan & Fashion | Rendah Lainnya",
+    "sektor_top1": "Kerajinan",
+    "sektor_top2": "Fashion",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Kerajinan",
+        "nilai": 115.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Fashion",
+        "nilai": 77.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Makanan",
+        "nilai": 64.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 13.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 5.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 11,
+    "label_cluster": 2,
+    "interpretasi": "Dominan Makanan & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Jasa",
+    "sektor_bottom1": "Makanan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 0.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Jasa",
+        "nilai": 0.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 0.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Lainnya",
+        "nilai": 0.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Makanan",
+        "nilai": 0.0
+      }
+    ],
+    "flag_imputasi": "PERLU_VALIDASI"
+  },
+  {
+    "id_kecamatan": 12,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Kerajinan",
+    "sektor_bottom1": "Makanan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 52.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Kerajinan",
+        "nilai": 16.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Jasa",
+        "nilai": 8.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Makanan",
+        "nilai": 6.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 2.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 13,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Makanan",
+    "sektor_bottom1": "Jasa",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 38.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Makanan",
+        "nilai": 12.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 10.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Jasa",
+        "nilai": 4.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 1.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  },
+  {
+    "id_kecamatan": 14,
+    "label_cluster": 2,
+    "interpretasi": "Dominan Makanan & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Jasa",
+    "sektor_bottom1": "Makanan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 0.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Jasa",
+        "nilai": 0.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 0.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Lainnya",
+        "nilai": 0.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Makanan",
+        "nilai": 0.0
+      }
+    ],
+    "flag_imputasi": "PERLU_VALIDASI"
+  },
+  {
+    "id_kecamatan": 15,
+    "label_cluster": 2,
+    "interpretasi": "Dominan Makanan & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Jasa",
+    "sektor_bottom1": "Makanan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 0.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Jasa",
+        "nilai": 0.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Kerajinan",
+        "nilai": 0.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Lainnya",
+        "nilai": 0.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Makanan",
+        "nilai": 0.0
+      }
+    ],
+    "flag_imputasi": "PERLU_VALIDASI"
+  },
+  {
+    "id_kecamatan": 16,
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_top1": "Fashion",
+    "sektor_top2": "Kerajinan",
+    "sektor_bottom1": "Makanan",
+    "sektor_bottom2": "Lainnya",
+    "ranking_sektor_5": [
+      {
+        "rank": 1,
+        "sektor": "Fashion",
+        "nilai": 32.0
+      },
+      {
+        "rank": 2,
+        "sektor": "Kerajinan",
+        "nilai": 9.0
+      },
+      {
+        "rank": 3,
+        "sektor": "Jasa",
+        "nilai": 4.0
+      },
+      {
+        "rank": 4,
+        "sektor": "Makanan",
+        "nilai": 3.0
+      },
+      {
+        "rank": 5,
+        "sektor": "Lainnya",
+        "nilai": 1.0
+      }
+    ],
+    "flag_imputasi": "OK"
+  }
+]

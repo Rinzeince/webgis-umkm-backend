@@ -1,0 +1,17 @@
+﻿id_kecamatan,nama_kecamatan,UMKM_Makanan,UMKM_Kerajinan,UMKM_Fashion,UMKM_Jasa,UMKM_Lainnya,Kepadatan_Penduduk,Pertumbuhan_Penduduk,Jarak_ke_Ibukota,label_cluster,interpretasi,sektor_top1,sektor_top2,sektor_bottom1,sektor_bottom2,flag_imputasi
+1,Lembang,268,51,280,68,35,1520,1.25,18.5,1,Dominan Fashion & Makanan | Rendah Lainnya,Fashion,Makanan,Kerajinan,Lainnya,OK
+2,Parongpong,185,35,193,47,24,1240,1.1,16.2,1,Dominan Fashion & Makanan | Rendah Lainnya,Fashion,Makanan,Kerajinan,Lainnya,OK
+3,Cisarua,115,22,120,29,15,980,0.95,14.0,1,Dominan Fashion & Makanan | Rendah Lainnya,Fashion,Makanan,Kerajinan,Lainnya,OK
+4,Cikalongwetan,18,19,68,8,2,850,1.45,22.5,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Kerajinan,Jasa,Lainnya,OK
+5,Cipeundeuy,12,14,45,5,2,620,1.05,30.0,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Kerajinan,Jasa,Lainnya,OK
+6,Ngamprah,160,98,420,47,22,2850,2.15,0.0,3,Dominan Fashion & Makanan | Rendah Lainnya,Fashion,Makanan,Jasa,Lainnya,OK
+7,Cipatat,22,25,85,10,3,1150,1.42,16.8,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Kerajinan,Jasa,Lainnya,OK
+8,Padalarang,195,118,510,57,27,3150,2.3,3.5,3,Dominan Fashion & Makanan | Rendah Lainnya,Fashion,Makanan,Jasa,Lainnya,OK
+9,Batujajar,57,51,315,47,17,1650,1.4,9.2,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Makanan,Jasa,Lainnya,OK
+10,Cihampelas,64,115,77,13,5,1480,1.6,12.4,4,Dominan Kerajinan & Fashion | Rendah Lainnya,Kerajinan,Fashion,Jasa,Lainnya,OK
+11,Cililin,0,0,0,0,0,1320,1.35,18.0,2,Dominan Makanan & Kerajinan | Rendah Lainnya,Fashion,Jasa,Makanan,Lainnya,PERLU_VALIDASI
+12,Cipongkor,6,16,52,8,2,780,1.12,28.5,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Kerajinan,Makanan,Lainnya,OK
+13,Rongga,12,10,38,4,1,520,0.85,42.0,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Makanan,Jasa,Lainnya,OK
+14,Sindangkerta,0,0,0,0,0,890,1.2,24.0,2,Dominan Makanan & Kerajinan | Rendah Lainnya,Fashion,Jasa,Makanan,Lainnya,PERLU_VALIDASI
+15,Gununghalu,0,0,0,0,0,580,0.9,38.5,2,Dominan Makanan & Kerajinan | Rendah Lainnya,Fashion,Jasa,Makanan,Lainnya,PERLU_VALIDASI
+16,Saguling,3,9,32,4,1,490,0.75,25.5,0,Dominan Fashion & Kerajinan | Rendah Lainnya,Fashion,Kerajinan,Makanan,Lainnya,OK

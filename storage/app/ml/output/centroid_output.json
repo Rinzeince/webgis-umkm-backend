@@ -1,0 +1,267 @@
+[
+  {
+    "label_cluster": 0,
+    "interpretasi": "Dominan Fashion & Kerajinan | Rendah Lainnya",
+    "sektor_dominan": [
+      "Fashion",
+      "Kerajinan"
+    ],
+    "sektor_rendah": [
+      "Lainnya"
+    ],
+    "ranking_sektor": [
+      {
+        "sektor": "Fashion",
+        "nilai": 0.6083,
+        "share_pct": 60.8,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Kerajinan",
+        "nilai": 0.1643,
+        "share_pct": 16.4,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Makanan",
+        "nilai": 0.1281,
+        "share_pct": 12.8,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Jasa",
+        "nilai": 0.0768,
+        "share_pct": 7.7,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Lainnya",
+        "nilai": 0.0226,
+        "share_pct": 2.3,
+        "vs_baseline": "BAWAH"
+      }
+    ],
+    "nilai_fitur": {
+      "f_prop_makanan": 12.81,
+      "f_prop_kerajinan": 16.43,
+      "f_prop_fashion": 60.83,
+      "f_prop_jasa": 7.68,
+      "f_prop_lainnya": 2.26,
+      "f_kepadatan": 865.7143,
+      "f_pertumbuhan": 1.1486,
+      "f_jarak": 24.9286
+    }
+  },
+  {
+    "label_cluster": 1,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_dominan": [
+      "Fashion",
+      "Makanan"
+    ],
+    "sektor_rendah": [
+      "Lainnya"
+    ],
+    "ranking_sektor": [
+      {
+        "sektor": "Fashion",
+        "nilai": 0.3988,
+        "share_pct": 39.9,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Makanan",
+        "nilai": 0.382,
+        "share_pct": 38.2,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Jasa",
+        "nilai": 0.0968,
+        "share_pct": 9.7,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Kerajinan",
+        "nilai": 0.0727,
+        "share_pct": 7.3,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Lainnya",
+        "nilai": 0.0498,
+        "share_pct": 5.0,
+        "vs_baseline": "BAWAH"
+      }
+    ],
+    "nilai_fitur": {
+      "f_prop_makanan": 38.2,
+      "f_prop_kerajinan": 7.27,
+      "f_prop_fashion": 39.88,
+      "f_prop_jasa": 9.68,
+      "f_prop_lainnya": 4.98,
+      "f_kepadatan": 1246.6667,
+      "f_pertumbuhan": 1.1,
+      "f_jarak": 16.2333
+    }
+  },
+  {
+    "label_cluster": 2,
+    "interpretasi": "Dominan Makanan & Kerajinan | Rendah Lainnya",
+    "sektor_dominan": [
+      "Makanan",
+      "Kerajinan"
+    ],
+    "sektor_rendah": [
+      "Lainnya"
+    ],
+    "ranking_sektor": [
+      {
+        "sektor": "Makanan",
+        "nilai": 0.2,
+        "share_pct": 20.0,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Kerajinan",
+        "nilai": 0.2,
+        "share_pct": 20.0,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Fashion",
+        "nilai": 0.2,
+        "share_pct": 20.0,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Jasa",
+        "nilai": 0.2,
+        "share_pct": 20.0,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Lainnya",
+        "nilai": 0.2,
+        "share_pct": 20.0,
+        "vs_baseline": "ATAS"
+      }
+    ],
+    "nilai_fitur": {
+      "f_prop_makanan": 20.0,
+      "f_prop_kerajinan": 20.0,
+      "f_prop_fashion": 20.0,
+      "f_prop_jasa": 20.0,
+      "f_prop_lainnya": 20.0,
+      "f_kepadatan": 930.0,
+      "f_pertumbuhan": 1.15,
+      "f_jarak": 26.8333
+    }
+  },
+  {
+    "label_cluster": 3,
+    "interpretasi": "Dominan Fashion & Makanan | Rendah Lainnya",
+    "sektor_dominan": [
+      "Fashion",
+      "Makanan"
+    ],
+    "sektor_rendah": [
+      "Lainnya"
+    ],
+    "ranking_sektor": [
+      {
+        "sektor": "Fashion",
+        "nilai": 0.5623,
+        "share_pct": 56.2,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Makanan",
+        "nilai": 0.2146,
+        "share_pct": 21.5,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Kerajinan",
+        "nilai": 0.1306,
+        "share_pct": 13.1,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Jasa",
+        "nilai": 0.0629,
+        "share_pct": 6.3,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Lainnya",
+        "nilai": 0.0296,
+        "share_pct": 3.0,
+        "vs_baseline": "BAWAH"
+      }
+    ],
+    "nilai_fitur": {
+      "f_prop_makanan": 21.46,
+      "f_prop_kerajinan": 13.06,
+      "f_prop_fashion": 56.23,
+      "f_prop_jasa": 6.29,
+      "f_prop_lainnya": 2.96,
+      "f_kepadatan": 3000.0,
+      "f_pertumbuhan": 2.225,
+      "f_jarak": 1.75
+    }
+  },
+  {
+    "label_cluster": 4,
+    "interpretasi": "Dominan Kerajinan & Fashion | Rendah Lainnya",
+    "sektor_dominan": [
+      "Kerajinan",
+      "Fashion"
+    ],
+    "sektor_rendah": [
+      "Lainnya"
+    ],
+    "ranking_sektor": [
+      {
+        "sektor": "Kerajinan",
+        "nilai": 0.4197,
+        "share_pct": 42.0,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Fashion",
+        "nilai": 0.281,
+        "share_pct": 28.1,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Makanan",
+        "nilai": 0.2336,
+        "share_pct": 23.4,
+        "vs_baseline": "ATAS"
+      },
+      {
+        "sektor": "Jasa",
+        "nilai": 0.0474,
+        "share_pct": 4.7,
+        "vs_baseline": "BAWAH"
+      },
+      {
+        "sektor": "Lainnya",
+        "nilai": 0.0182,
+        "share_pct": 1.8,
+        "vs_baseline": "BAWAH"
+      }
+    ],
+    "nilai_fitur": {
+      "f_prop_makanan": 23.36,
+      "f_prop_kerajinan": 41.97,
+      "f_prop_fashion": 28.1,
+      "f_prop_jasa": 4.74,
+      "f_prop_lainnya": 1.82,
+      "f_kepadatan": 1480.0,
+      "f_pertumbuhan": 1.6,
+      "f_jarak": 12.4
+    }
+  }
+]
