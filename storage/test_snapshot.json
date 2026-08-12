@@ -1,0 +1,21 @@
+{
+  "tanggal_snapshot": "2026-07-25",
+  "data": [
+    {"id_kecamatan": 1, "nama_kecamatan": "Lembang", "tahun_demografi": 2025, "fitur": {"jml_makanan": 120, "jml_kerajinan": 45, "jml_fashion": 80, "jml_jasa": 55, "jml_lainnya": 10, "kepadatan_penduduk": 1500, "pertumbuhan": 1.2, "jarak_ke_ibukota": 8.4}},
+    {"id_kecamatan": 2, "nama_kecamatan": "Parongpong", "tahun_demografi": 2025, "fitur": {"jml_makanan": 90, "jml_kerajinan": 30, "jml_fashion": 60, "jml_jasa": 40, "jml_lainnya": 8, "kepadatan_penduduk": 1200, "pertumbuhan": 1.1, "jarak_ke_ibukota": 10.2}},
+    {"id_kecamatan": 3, "nama_kecamatan": "Cisarua", "tahun_demografi": 2025, "fitur": {"jml_makanan": 70, "jml_kerajinan": 25, "jml_fashion": 50, "jml_jasa": 35, "jml_lainnya": 5, "kepadatan_penduduk": 950, "pertumbuhan": 0.9, "jarak_ke_ibukota": 14.5}},
+    {"id_kecamatan": 4, "nama_kecamatan": "Cikalongwetan", "tahun_demografi": 2025, "fitur": {"jml_makanan": 110, "jml_kerajinan": 60, "jml_fashion": 40, "jml_jasa": 50, "jml_lainnya": 12, "kepadatan_penduduk": 800, "pertumbuhan": 1.5, "jarak_ke_ibukota": 22.0}},
+    {"id_kecamatan": 5, "nama_kecamatan": "Cipeundeuy", "tahun_demografi": 2025, "fitur": {"jml_makanan": 65, "jml_kerajinan": 15, "jml_fashion": 30, "jml_jasa": 25, "jml_lainnya": 4, "kepadatan_penduduk": 600, "pertumbuhan": 1.0, "jarak_ke_ibukota": 30.0}},
+    {"id_kecamatan": 6, "nama_kecamatan": "Ngamprah", "tahun_demografi": 2025, "fitur": {"jml_makanan": 200, "jml_kerajinan": 80, "jml_fashion": 150, "jml_jasa": 120, "jml_lainnya": 25, "kepadatan_penduduk": 2800, "pertumbuhan": 2.1, "jarak_ke_ibukota": 0.0}},
+    {"id_kecamatan": 7, "nama_kecamatan": "Padalarang", "tahun_demografi": 2025, "fitur": {"jml_makanan": 250, "jml_kerajinan": 100, "jml_fashion": 180, "jml_jasa": 160, "jml_lainnya": 30, "kepadatan_penduduk": 3200, "pertumbuhan": 2.3, "jarak_ke_ibukota": 3.5}},
+    {"id_kecamatan": 8, "nama_kecamatan": "Batujajar", "tahun_demografi": 2025, "fitur": {"jml_makanan": 130, "jml_kerajinan": 50, "jml_fashion": 90, "jml_jasa": 70, "jml_lainnya": 15, "kepadatan_penduduk": 1600, "pertumbuhan": 1.4, "jarak_ke_ibukota": 9.0}},
+    {"id_kecamatan": 9, "nama_kecamatan": "Cihampelas", "tahun_demografi": 2025, "fitur": {"jml_makanan": 140, "jml_kerajinan": 110, "jml_fashion": 130, "jml_jasa": 65, "jml_lainnya": 18, "kepadatan_penduduk": 1450, "pertumbuhan": 1.6, "jarak_ke_ibukota": 12.0}},
+    {"id_kecamatan": 10, "nama_kecamatan": "Cililin", "tahun_demografi": 2025, "fitur": {"jml_makanan": 180, "jml_kerajinan": 75, "jml_fashion": 110, "jml_jasa": 85, "jml_lainnya": 20, "kepadatan_penduduk": 1300, "pertumbuhan": 1.3, "jarak_ke_ibukota": 18.0}},
+    {"id_kecamatan": 11, "nama_kecamatan": "Cipongkor", "tahun_demografi": 2025, "fitur": {"jml_makanan": 85, "jml_kerajinan": 40, "jml_fashion": 45, "jml_jasa": 30, "jml_lainnya": 8, "kepadatan_penduduk": 750, "pertumbuhan": 1.1, "jarak_ke_ibukota": 28.0}},
+    {"id_kecamatan": 12, "nama_kecamatan": "Rongga", "tahun_demografi": 2025, "fitur": {"jml_makanan": 50, "jml_kerajinan": 20, "jml_fashion": 25, "jml_jasa": 20, "jml_lainnya": 3, "kepadatan_penduduk": 500, "pertumbuhan": 0.8, "jarak_ke_ibukota": 42.0}},
+    {"id_kecamatan": 13, "nama_kecamatan": "Sindangkerta", "tahun_demografi": 2025, "fitur": {"jml_makanan": 95, "jml_kerajinan": 35, "jml_fashion": 55, "jml_jasa": 45, "jml_lainnya": 9, "kepadatan_penduduk": 850, "pertumbuhan": 1.2, "jarak_ke_ibukota": 24.0}},
+    {"id_kecamatan": 14, "nama_kecamatan": "Gununghalu", "tahun_demografi": 2025, "fitur": {"jml_makanan": 60, "jml_kerajinan": 30, "jml_fashion": 35, "jml_jasa": 25, "jml_lainnya": 5, "kepadatan_penduduk": 550, "pertumbuhan": 0.9, "jarak_ke_ibukota": 38.0}},
+    {"id_kecamatan": 15, "nama_kecamatan": "Saguling", "tahun_demografi": 2025, "fitur": {"jml_makanan": 45, "jml_kerajinan": 15, "jml_fashion": 20, "jml_jasa": 15, "jml_lainnya": 2, "kepadatan_penduduk": 480, "pertumbuhan": 0.7, "jarak_ke_ibukota": 25.0}},
+    {"id_kecamatan": 16, "nama_kecamatan": "Cipatat", "tahun_demografi": 2025, "fitur": {"jml_makanan": 150, "jml_kerajinan": 55, "jml_fashion": 85, "jml_jasa": 90, "jml_lainnya": 14, "kepadatan_penduduk": 1100, "pertumbuhan": 1.4, "jarak_ke_ibukota": 16.0}}
+  ]
+}

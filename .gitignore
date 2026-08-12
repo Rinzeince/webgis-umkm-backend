@@ -1,0 +1,43 @@
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment configuration
+.env
+.env.backup
+.env.production
+
+# Dependencies & build output
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+
+# Storage & Key files
+/storage/*.key
+/storage/pail
+
+# Database local
+/database/*.sqlite
+/database/*.sqlite-journal
+
+# IDE & Cache
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/.kiro
+/auth.json
+Homestead.json
+Homestead.yaml
+
+/ml-service
+
+CLAUDE.md
+GEMINI.md
+SPEC.md

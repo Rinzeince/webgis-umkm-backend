@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Filament\Resources\Artikels\Pages;
+
+use App\Filament\Resources\Artikels\ArtikelResource;
+use App\Filament\Resources\Artikels\Widgets\ArtikelStatsOverview;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+
+class ListArtikels extends ListRecords
+{
+    protected static string $resource = ArtikelResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+        ];
+    }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            ArtikelStatsOverview::class,
+        ];
+    }
+}
