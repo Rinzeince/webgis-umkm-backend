@@ -6,7 +6,10 @@ use App\Models\User;
 use App\Services\ActivityLogger;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,6 +27,29 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // ─── API Rate Limiting Configuration ───
+        RateLimiter::for('api', function (Request $request) {
+            return Limit::perMinute(60)
+                ->by($request->ip())
+                ->response(function (Request $request, array $headers) {
+                    return response()->json([
+                        'status' => 'error',
+                        'message' => 'Terlalu banyak permintaan. Silakan coba kembali dalam beberapa saat.',
+                    ], 429, $headers);
+                });
+        });
+
+        RateLimiter::for('search-limiter', function (Request $request) {
+            return Limit::perMinute(30)
+                ->by($request->ip())
+                ->response(function (Request $request, array $headers) {
+                    return response()->json([
+                        'status' => 'error',
+                        'message' => 'Terlalu banyak permintaan pencarian. Silakan coba kembali dalam beberapa saat.',
+                    ], 429, $headers);
+                });
+        });
+
         \App\Models\Umkm::observe(\App\Observers\UmkmObserver::class);
         \App\Models\User::observe(\App\Observers\UserObserver::class);
         \App\Models\Artikel::observe(\App\Observers\ArtikelObserver::class);

@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('v1')->group(function () {
+Route::prefix('v1')->middleware('throttle:api')->group(function () {
     // Kecamatan
     Route::get('/kecamatan', [KecamatanController::class, 'index']);
     Route::get('/kecamatan/{id}', [KecamatanController::class, 'show']);
@@ -32,8 +32,8 @@ Route::prefix('v1')->group(function () {
     Route::get('/cluster', [ClusterController::class, 'index']);
     Route::get('/centroid', [CentroidController::class, 'index']);
 
-    // UMKM & Point Search
-    Route::get('/umkm/search', [UmkmController::class, 'search']);
+    // UMKM & Point Search (Protected with tighter search rate limiter)
+    Route::get('/umkm/search', [UmkmController::class, 'search'])->middleware('throttle:search-limiter');
     Route::get('/umkm', [UmkmController::class, 'index']);
     Route::get('/umkm/{id}', [UmkmController::class, 'show']);
 
