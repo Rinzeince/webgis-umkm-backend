@@ -56,7 +56,8 @@ class RunKMeansAnalysisJob implements ShouldQueue
             // 3. Run Python process — cross-platform env (Windows & Linux/EC2)
             $isWindows = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
             $pathSeparator = $isWindows ? ';' : ':';
-            $mplConfigDir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'matplotlib_config';
+            $mplConfigDir = storage_path('app/ml/matplotlib_config');
+            File::ensureDirectoryExists($mplConfigDir);
 
             $baseEnv = [
                 'PYTHONHASHSEED' => '0',
