@@ -146,7 +146,7 @@ class RunKMeansAnalysisJob implements ShouldQueue
             }
 
             // 6. Database Transaction for atomic persistence
-            DB::transaction(function () use ($analisis, $metadata, $hasilClusterList, $centroidList) {
+            DB::transaction(function () use ($analisis, $metadata, $hasilClusterList, $centroidList, $graficUrls) {
                 $analisis->update([
                     'k_optimal' => $metadata['k_optimal'] ?? null,
                     'nilai_silhouette' => $metadata['nilai_silhouette'] ?? null,
