@@ -129,10 +129,10 @@ class RunKMeansAnalysisJob implements ShouldQueue
                 }
 
                 if ($useS3) {
-                    // Upload to S3 under ml-analysis/ prefix
+                    // Upload to S3 under ml-analysis/ prefix (using Bucket Policy for public access, without ACL)
                     $s3Key = 'ml-analysis/' . $gfx;
                     \Illuminate\Support\Facades\Storage::disk('analysis')
-                        ->put($s3Key, File::get($source), 'public');
+                        ->put($s3Key, File::get($source));
                     $graficUrls[] = \Illuminate\Support\Facades\Storage::disk('analysis')
                         ->url($s3Key);
                 } else {
