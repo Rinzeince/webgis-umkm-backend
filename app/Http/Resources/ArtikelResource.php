@@ -14,15 +14,19 @@ class ArtikelResource extends JsonResource
     {
         $thumbnail = $this->thumbnail_url;
         if ($thumbnail) {
-            $path = preg_replace('/^https?:\/\/[^\/]+\/storage\//', '', $thumbnail);
-            $path = str_replace('/storage/', '', $path);
-            $path = ltrim($path, '/');
-            
-            $baseUrl = $request->getSchemeAndHttpHost();
-            if (!str_contains($baseUrl, ':8000') && (str_contains($baseUrl, 'localhost') || str_contains($baseUrl, '127.0.0.1'))) {
-                $baseUrl = 'http://127.0.0.1:8000';
+            if (str_starts_with($thumbnail, 'https://') || str_contains($thumbnail, 'amazonaws.com')) {
+                // S3 URL or external HTTPS image — keep full URL
+            } else {
+                $path = preg_replace('/^https?:\/\/[^\/]+\/storage\//', '', $thumbnail);
+                $path = str_replace('/storage/', '', $path);
+                $path = ltrim($path, '/');
+                
+                if (config('filesystems.default') === 's3') {
+                    $thumbnail = \Illuminate\Support\Facades\Storage::disk('s3')->url($path);
+                } else {
+                    $thumbnail = '/storage/' . $path;
+                }
             }
-            $thumbnail = $baseUrl . '/storage/' . $path;
         }
 
         $content = $this->content;

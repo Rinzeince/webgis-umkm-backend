@@ -56,8 +56,7 @@ class ArtikelForm
                                 FileUpload::make('thumbnail_url')
                                     ->label('Gambar Sampul (Thumbnail)')
                                     ->directory('artikel/thumbnail')
-                                    ->disk('public')
-                                    ->visibility('public')
+                                    ->disk(config('filesystems.default') === 's3' ? 's3' : 'public')
                                     ->image()
                                     ->maxSize(2048),
                                 Grid::make(1)

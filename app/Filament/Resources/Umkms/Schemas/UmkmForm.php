@@ -63,6 +63,7 @@ class UmkmForm
                         FileUpload::make('foto_url')
                             ->label('Foto Usaha')
                             ->directory('umkm/foto')
+                            ->disk(config('filesystems.default') === 's3' ? 's3' : 'public')
                             ->image()
                             ->maxSize(2048),
                     ]),
