@@ -491,7 +491,10 @@
 
                 <div class="base-url-pill">
                     <span style="color: var(--text-muted);">Base URL:</span>
-                    <strong>http://127.0.0.1:8000/api/v1</strong>
+                    <strong id="api-base-url">{{ url('/api/v1') }}</strong>
+                    <button onclick="copyBaseUrl()" id="btn-copy-base" title="Salin Base URL" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); cursor: pointer; color: #34d399; margin-left: 8px; padding: 3px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; transition: all 0.2s;">
+                        📋 Salin
+                    </button>
                 </div>
             </section>
 
@@ -791,17 +794,41 @@
 
     <!-- LIVE API TEST SCRIPT -->
     <script>
+        function copyBaseUrl() {
+            const url = document.getElementById('api-base-url').innerText;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.getElementById('btn-copy-base');
+                btn.innerText = '✅ Tersalin!';
+                setTimeout(() => { btn.innerText = '📋 Salin'; }, 2000);
+            });
+        }
+
         async function testEndpoint(endpoint, elementId) {
             const pre = document.getElementById(elementId);
-            pre.innerHTML = `<span style="color: #38bdf8;">⏳ Mengirim GET HTTP Request ke ${endpoint}...</span>`;
+            const fullUrl = `${window.location.origin}${endpoint}`;
+            pre.innerHTML = `<div style="margin-bottom: 0.5rem; color: #38bdf8;">⏳ Mengirim GET HTTP Request ke <code>${fullUrl}</code>...</div>`;
 
+            const startTime = performance.now();
             try {
                 const response = await fetch(endpoint);
+                const latency = Math.round(performance.now() - startTime);
+                const isSuccess = response.ok;
+                const statusBadge = isSuccess 
+                    ? `<span style="background: #065f46; color: #34d399; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Status: ${response.status} ${response.statusText || 'OK'}</span>`
+                    : `<span style="background: #7f1d1d; color: #f87171; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Status: ${response.status} ${response.statusText}</span>`;
+                
                 const data = await response.json();
+                const headerInfo = `<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem; font-size: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">` +
+                    `${statusBadge}` +
+                    `<span style="color: #94a3b8;">Waktu: <strong>${latency} ms</strong></span>` +
+                    `<span style="color: #64748b; font-family: monospace;">Target: ${fullUrl}</span>` +
+                    `</div>`;
 
-                pre.innerHTML = formatJsonHighlight(data);
+                pre.innerHTML = headerInfo + formatJsonHighlight(data);
             } catch (error) {
-                pre.innerHTML = `<span style="color: #f87171;">❌ Gagal mengambil data API: ${error.message}</span>`;
+                const latency = Math.round(performance.now() - startTime);
+                pre.innerHTML = `<div style="color: #f87171; margin-bottom: 0.5rem;">❌ Gagal mengambil data API (${latency} ms): ${error.message}</div>` +
+                    `<div style="color: #64748b; font-size: 0.75rem;">Target: ${fullUrl}</div>`;
             }
         }
 
