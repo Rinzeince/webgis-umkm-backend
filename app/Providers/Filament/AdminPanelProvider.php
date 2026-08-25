@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('SIGAP UMKM KBB')
+            ->brandName('SIGAP ADMIN PANEL')
             ->colors([
                 'primary' => Color::Emerald,
             ])
@@ -37,7 +37,7 @@ class AdminPanelProvider extends PanelProvider
                 'UMKM',
                 'Kecamatan',
                 'Artikel & Berita',
-                'Manajemen Pengguna',
+                'User & Hak Akses',
                 // 'Dokumentasi API',
             ])
             // ->navigationItems([
