@@ -232,7 +232,7 @@
                         <x-slot name="heading">1. Plot Elbow Method (Penentuan K Optimal)</x-slot>
                         <x-slot name="description">Grafik penurunan WCSS untuk menentukan sikut penurunan inertia.</x-slot>
                         <div style="border-radius: 0.75rem; overflow: hidden; padding: 0.5rem; margin-top: 0.75rem;" class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                            <img src="/storage/analysis/elbow.png?v={{ time() }}" alt="Elbow Method Plot" style="width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
+                            <img src="{{ $graficUrls['elbow.png'] ?? '/storage/analysis/elbow.png' }}?v={{ time() }}" alt="Elbow Method Plot" style="width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
                         </div>
                     </x-filament::section>
 
@@ -241,7 +241,7 @@
                         <x-slot name="heading">2. Plot Silhouette Score per Nilai K</x-slot>
                         <x-slot name="description">Perbandingan skor koefisien Silhouette untuk mengonfirmasi pilihan K optimal.</x-slot>
                         <div style="border-radius: 0.75rem; overflow: hidden; padding: 0.5rem; margin-top: 0.75rem;" class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                            <img src="/storage/analysis/silhouette.png?v={{ time() }}" alt="Silhouette Score Plot" style="width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
+                            <img src="{{ $graficUrls['silhouette.png'] ?? '/storage/analysis/silhouette.png' }}?v={{ time() }}" alt="Silhouette Score Plot" style="width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
                         </div>
                     </x-filament::section>
                 </div>
@@ -251,7 +251,7 @@
                     <x-slot name="heading">3. Proyeksi Spasial Scatter Plot K-Means (PCA 2D)</x-slot>
                     <x-slot name="description">Sebaran 16 kecamatan Kabupaten Bandung Barat dalam ruang komponen utama PCA 2D lengkap dengan batas klaster.</x-slot>
                     <div style="border-radius: 0.75rem; overflow: hidden; padding: 0.75rem; margin-top: 0.75rem; display: flex; justify-content: center;" class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                        <img src="/storage/analysis/scatter_cluster.png?v={{ time() }}" alt="Scatter PCA Plot" style="max-width: 900px; width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
+                        <img src="{{ $graficUrls['scatter_cluster.png'] ?? '/storage/analysis/scatter_cluster.png' }}?v={{ time() }}" alt="Scatter PCA Plot" style="max-width: 900px; width: 100%; height: auto; border-radius: 0.5rem; object-fit: contain;" />
                     </div>
                 </x-filament::section>
             </div>

@@ -1,0 +1,229 @@
+{
+  "tanggal_snapshot": "2026-07-24",
+  "data": [
+    {
+      "id_kecamatan": 1,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 120,
+        "jml_kerajinan": 45,
+        "jml_fashion": 80,
+        "jml_jasa": 55,
+        "jml_lainnya": 10,
+        "kepadatan_penduduk": 4218,
+        "pertumbuhan": 1.82,
+        "jarak_ke_ibukota": 12.4
+      }
+    },
+    {
+      "id_kecamatan": 2,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 85,
+        "jml_kerajinan": 120,
+        "jml_fashion": 95,
+        "jml_jasa": 40,
+        "jml_lainnya": 8,
+        "kepadatan_penduduk": null,
+        "pertumbuhan": 2.15,
+        "jarak_ke_ibukota": 8.7
+      }
+    },
+    {
+      "id_kecamatan": 3,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 95,
+        "jml_kerajinan": 65,
+        "jml_fashion": 110,
+        "jml_jasa": 70,
+        "jml_lainnya": 12,
+        "kepadatan_penduduk": 2769,
+        "pertumbuhan": null,
+        "jarak_ke_ibukota": 15.2
+      }
+    },
+    {
+      "id_kecamatan": 4,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 140,
+        "jml_kerajinan": 50,
+        "jml_fashion": 75,
+        "jml_jasa": 85,
+        "jml_lainnya": 15,
+        "kepadatan_penduduk": 3542,
+        "pertumbuhan": 1.95,
+        "jarak_ke_ibukota": 10.5
+      }
+    },
+    {
+      "id_kecamatan": 5,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 110,
+        "jml_kerajinan": 88,
+        "jml_fashion": 102,
+        "jml_jasa": 60,
+        "jml_lainnya": 9,
+        "kepadatan_penduduk": 2980,
+        "pertumbuhan": 1.78,
+        "jarak_ke_ibukota": 18.3
+      }
+    },
+    {
+      "id_kecamatan": 6,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 75,
+        "jml_kerajinan": 95,
+        "jml_fashion": 125,
+        "jml_jasa": 48,
+        "jml_lainnya": 7,
+        "kepadatan_penduduk": 1850,
+        "pertumbuhan": 2.34,
+        "jarak_ke_ibukota": 22.1
+      }
+    },
+    {
+      "id_kecamatan": 7,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 130,
+        "jml_kerajinan": 70,
+        "jml_fashion": 90,
+        "jml_jasa": 75,
+        "jml_lainnya": 11,
+        "kepadatan_penduduk": 3201,
+        "pertumbuhan": 1.88,
+        "jarak_ke_ibukota": 9.8
+      }
+    },
+    {
+      "id_kecamatan": 8,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 100,
+        "jml_kerajinan": 82,
+        "jml_fashion": 115,
+        "jml_jasa": 65,
+        "jml_lainnya": 10,
+        "kepadatan_penduduk": 2650,
+        "pertumbuhan": 2.05,
+        "jarak_ke_ibukota": 14.6
+      }
+    },
+    {
+      "id_kecamatan": 9,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 88,
+        "jml_kerajinan": 110,
+        "jml_fashion": 98,
+        "jml_jasa": 52,
+        "jml_lainnya": 8,
+        "kepadatan_penduduk": 2180,
+        "pertumbuhan": 1.92,
+        "jarak_ke_ibukota": 19.7
+      }
+    },
+    {
+      "id_kecamatan": 10,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 125,
+        "jml_kerajinan": 55,
+        "jml_fashion": 85,
+        "jml_jasa": 80,
+        "jml_lainnya": 13,
+        "kepadatan_penduduk": 3890,
+        "pertumbuhan": 1.75,
+        "jarak_ke_ibukota": 11.2
+      }
+    },
+    {
+      "id_kecamatan": 11,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 105,
+        "jml_kerajinan": 92,
+        "jml_fashion": 108,
+        "jml_jasa": 58,
+        "jml_lainnya": 9,
+        "kepadatan_penduduk": 2520,
+        "pertumbuhan": 2.12,
+        "jarak_ke_ibukota": 16.8
+      }
+    },
+    {
+      "id_kecamatan": 12,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 92,
+        "jml_kerajinan": 78,
+        "jml_fashion": 120,
+        "jml_jasa": 62,
+        "jml_lainnya": 10,
+        "kepadatan_penduduk": 2340,
+        "pertumbuhan": 1.98,
+        "jarak_ke_ibukota": 17.5
+      }
+    },
+    {
+      "id_kecamatan": 13,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 115,
+        "jml_kerajinan": 68,
+        "jml_fashion": 95,
+        "jml_jasa": 72,
+        "jml_lainnya": 12,
+        "kepadatan_penduduk": 3105,
+        "pertumbuhan": 1.85,
+        "jarak_ke_ibukota": 13.4
+      }
+    },
+    {
+      "id_kecamatan": 14,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 80,
+        "jml_kerajinan": 105,
+        "jml_fashion": 112,
+        "jml_jasa": 45,
+        "jml_lainnya": 7,
+        "kepadatan_penduduk": 1920,
+        "pertumbuhan": 2.28,
+        "jarak_ke_ibukota": 20.9
+      }
+    },
+    {
+      "id_kecamatan": 15,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 135,
+        "jml_kerajinan": 60,
+        "jml_fashion": 88,
+        "jml_jasa": 78,
+        "jml_lainnya": 14,
+        "kepadatan_penduduk": 3675,
+        "pertumbuhan": 1.72,
+        "jarak_ke_ibukota": 10.8
+      }
+    },
+    {
+      "id_kecamatan": 16,
+      "tahun_demografi": 2025,
+      "fitur": {
+        "jml_makanan": 98,
+        "jml_kerajinan": 85,
+        "jml_fashion": 105,
+        "jml_jasa": 55,
+        "jml_lainnya": 9,
+        "kepadatan_penduduk": 2450,
+        "pertumbuhan": 2.08,
+        "jarak_ke_ibukota": 15.9
+      }
+    }
+  ]
+}

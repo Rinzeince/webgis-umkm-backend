@@ -264,13 +264,37 @@ class AnalisisDataPage extends Page
         $perluAnalisis = DatasetAgregat::where('status_analisis', 'perlu_analisis')->exists();
         $publishedAnalisis = Analisis::where('is_published', true)->first();
 
+        // Build chart URLs from path_grafik field.
+        // In production (S3), path_grafik stores full S3 URLs.
+        // In development (local), path_grafik stores relative paths → prepend /storage/analysis/.
+        $graficUrls = [];
+        if ($selectedAnalisis && !empty($selectedAnalisis->path_grafik)) {
+            foreach (['elbow.png', 'silhouette.png', 'scatter_cluster.png'] as $idx => $gfx) {
+                $stored = $selectedAnalisis->path_grafik[$idx] ?? null;
+                if ($stored && str_starts_with($stored, 'http')) {
+                    // Already a full URL (S3)
+                    $graficUrls[$gfx] = $stored;
+                } elseif ($stored) {
+                    // Legacy relative path — make it a proper local URL
+                    $graficUrls[$gfx] = '/storage/analysis/' . basename($stored);
+                } else {
+                    $graficUrls[$gfx] = '/storage/analysis/' . $gfx;
+                }
+            }
+        } else {
+            foreach (['elbow.png', 'silhouette.png', 'scatter_cluster.png'] as $gfx) {
+                $graficUrls[$gfx] = '/storage/analysis/' . $gfx;
+            }
+        }
+
         return [
-            'allBatches' => $allBatches,
-            'selectedAnalisis' => $selectedAnalisis,
-            'centroids' => $centroids,
-            'hasilClusters' => $hasilClusters,
-            'perluAnalisis' => $perluAnalisis,
+            'allBatches'        => $allBatches,
+            'selectedAnalisis'  => $selectedAnalisis,
+            'centroids'         => $centroids,
+            'hasilClusters'     => $hasilClusters,
+            'perluAnalisis'     => $perluAnalisis,
             'publishedAnalisis' => $publishedAnalisis,
+            'graficUrls'        => $graficUrls,
         ];
     }
 }

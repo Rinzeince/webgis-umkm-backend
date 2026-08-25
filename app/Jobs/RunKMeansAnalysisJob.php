@@ -53,34 +53,35 @@ class RunKMeansAnalysisJob implements ShouldQueue
             $pythonBinary = $this->resolvePythonBinary();
             $scriptPath = $this->resolveScriptPath();
 
-            // 3. Run Python process with system environment, PYTHONPATH, & PYTHONHASHSEED fix
-            $userSite = getenv('APPDATA')
-                ? getenv('APPDATA') . '\\Python\\Python310\\site-packages'
-                : 'C:\\Users\\v14\\AppData\\Roaming\\Python\\Python310\\site-packages';
+            // 3. Run Python process — cross-platform env (Windows & Linux/EC2)
+            $isWindows = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
+            $pathSeparator = $isWindows ? ';' : ':';
+            $mplConfigDir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'matplotlib_config';
 
-            $existingPyPath = getenv('PYTHONPATH') ?: '';
-            $pythonPath = $userSite . ($existingPyPath ? ';' . $existingPyPath : '');
+            $baseEnv = [
+                'PYTHONHASHSEED' => '0',
+                'MPLCONFIGDIR'   => $mplConfigDir,
+                'PYTHONPATH'     => getenv('PYTHONPATH') ?: '',
+                'PATH'           => getenv('PATH') ?: (getenv('Path') ?: ''),
+                'TMP'            => sys_get_temp_dir(),
+                'TEMP'           => sys_get_temp_dir(),
+                'HOME'           => getenv('HOME') ?: (getenv('USERPROFILE') ?: '/tmp'),
+            ];
 
-            $userProfile = getenv('USERPROFILE')
-                ?: (getenv('HOMEDRIVE') && getenv('HOMEPATH') ? getenv('HOMEDRIVE') . getenv('HOMEPATH') : 'C:\\Users\\v14');
+            // Windows-specific vars (no-op on Linux)
+            if ($isWindows) {
+                $userSite = getenv('APPDATA')
+                    ? getenv('APPDATA') . '\\Python\\Python310\\site-packages'
+                    : sys_get_temp_dir();
+                $baseEnv['PYTHONPATH']  = $userSite . $pathSeparator . $baseEnv['PYTHONPATH'];
+                $baseEnv['USERPROFILE'] = getenv('USERPROFILE') ?: 'C:\\Users\\Default';
+                $baseEnv['HOMEDRIVE']   = getenv('HOMEDRIVE') ?: 'C:';
+                $baseEnv['HOMEPATH']    = getenv('HOMEPATH') ?: '\\Users\\Default';
+                $baseEnv['SYSTEMROOT']  = getenv('SystemRoot') ?: 'C:\\Windows';
+                $baseEnv['WINDIR']      = getenv('WINDIR') ?: 'C:\\Windows';
+            }
 
-            $env = array_merge(
-                $_SERVER,
-                $_ENV,
-                [
-                    'PYTHONHASHSEED' => '0',
-                    'PYTHONPATH' => $pythonPath,
-                    'USERPROFILE' => $userProfile,
-                    'HOMEDRIVE' => getenv('HOMEDRIVE') ?: 'C:',
-                    'HOMEPATH' => getenv('HOMEPATH') ?: '\\Users\\v14',
-                    'MPLCONFIGDIR' => sys_get_temp_dir() . '/matplotlib_config',
-                    'SYSTEMROOT' => getenv('SystemRoot') ?: (getenv('SYSTEMROOT') ?: 'C:\\Windows'),
-                    'WINDIR' => getenv('windir') ?: (getenv('WINDIR') ?: 'C:\\Windows'),
-                    'PATH' => getenv('PATH') ?: (getenv('Path') ?: ''),
-                    'TMP' => sys_get_temp_dir(),
-                    'TEMP' => sys_get_temp_dir(),
-                ]
-            );
+            $env = array_merge($_SERVER, $_ENV, $baseEnv);
 
             $result = Process::path(base_path())
                 ->env($env)
@@ -115,15 +116,31 @@ class RunKMeansAnalysisJob implements ShouldQueue
             $hasilClusterList = json_decode(File::get($hasilFile), true);
             $centroidList = json_decode(File::get($centroidFile), true);
 
-            // 5. Copy graphic PNGs to public disk
-            $publicAnalysisDir = storage_path('app/public/analysis');
-            File::ensureDirectoryExists($publicAnalysisDir);
-
+            // 5. Store graphic PNGs — S3 (production) or local public disk (local dev)
+            $useS3 = config('filesystems.default') === 's3'
+                || config('filesystems.disks.analysis.driver') === 's3';
             $graphics = ['elbow.png', 'silhouette.png', 'scatter_cluster.png'];
+            $graficUrls = [];
+
             foreach ($graphics as $gfx) {
                 $source = $outputDir . '/' . $gfx;
-                if (File::exists($source)) {
+                if (!File::exists($source)) {
+                    continue;
+                }
+
+                if ($useS3) {
+                    // Upload to S3 under ml-analysis/ prefix
+                    $s3Key = 'ml-analysis/' . $gfx;
+                    \Illuminate\Support\Facades\Storage::disk('analysis')
+                        ->put($s3Key, File::get($source), 'public');
+                    $graficUrls[] = \Illuminate\Support\Facades\Storage::disk('analysis')
+                        ->url($s3Key);
+                } else {
+                    // Local development: copy to storage/app/public/analysis/
+                    $publicAnalysisDir = storage_path('app/public/analysis');
+                    File::ensureDirectoryExists($publicAnalysisDir);
                     File::copy($source, $publicAnalysisDir . '/' . $gfx);
+                    $graficUrls[] = '/storage/analysis/' . $gfx;
                 }
             }
 
@@ -135,7 +152,7 @@ class RunKMeansAnalysisJob implements ShouldQueue
                     'nilai_dbi' => $metadata['nilai_dbi'] ?? null,
                     'dataset_snapshot' => $metadata['dataset_snapshot'] ?? null,
                     'scaler_params' => $metadata['scaler_params'] ?? null,
-                    'path_grafik' => $metadata['path_grafik'] ?? ['elbow.png', 'silhouette.png', 'scatter_cluster.png'],
+                    'path_grafik' => !empty($graficUrls) ? $graficUrls : ($metadata['path_grafik'] ?? ['elbow.png', 'silhouette.png', 'scatter_cluster.png']),
                     'model_params' => $metadata['model_params'] ?? null,
                     'status_job' => 'selesai',
                     'error_log' => null,

@@ -60,6 +60,31 @@ return [
             'report' => false,
         ],
 
+        // ─── ML Analysis Output Disk ───
+        // Set ANALYSIS_STORAGE_DRIVER=s3 in production .env to upload PNG charts to AWS S3.
+        // Falls back to local disk during development (ANALYSIS_STORAGE_DRIVER=local).
+        'analysis' => env('ANALYSIS_STORAGE_DRIVER', 'local') === 's3'
+            ? [
+                'driver'                  => 's3',
+                'key'                     => env('AWS_ACCESS_KEY_ID'),
+                'secret'                  => env('AWS_SECRET_ACCESS_KEY'),
+                'region'                  => env('AWS_DEFAULT_REGION', 'ap-southeast-1'),
+                'bucket'                  => env('AWS_BUCKET'),
+                'url'                     => env('AWS_URL'),
+                'visibility'              => 'public',
+                'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+                'throw'                   => false,
+                'report'                  => false,
+            ]
+            : [
+                'driver'     => 'local',
+                'root'       => storage_path('app/public/analysis'),
+                'url'        => rtrim(env('APP_URL', 'http://localhost'), '/') . '/storage/analysis',
+                'visibility' => 'public',
+                'throw'      => false,
+                'report'     => false,
+            ],
+
     ],
 
     /*

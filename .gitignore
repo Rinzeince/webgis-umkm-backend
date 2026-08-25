@@ -4,6 +4,7 @@ Thumbs.db
 
 # Environment configuration
 .env
+.env.example
 .env.backup
 .env.production
 
@@ -34,10 +35,17 @@ Thumbs.db
 /.kiro
 /auth.json
 Homestead.json
-Homestead.yaml
-
-/ml-service
+# Python ML-Service (tracked in repo, ignoring venv & cache)
+/ml-service/venv/
+/ml-service/.venv/
+/ml-service/__pycache__/
+/ml-service/*/__pycache__/
+/ml-service/output/*.json
+/ml-service/output/*.png
+/ml-service/output/*.csv
+!/ml-service/output/.gitkeep
 
 CLAUDE.md
 GEMINI.md
 SPEC.md
+

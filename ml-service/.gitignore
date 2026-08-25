@@ -1,0 +1,44 @@
+# Python Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Dynamic Output Files (re-generated on each analysis execution)
+output/*.json
+output/*.csv
+output/*.png
+output/*.jpg
+
+# Keep output folder structure in git
+!output/.gitkeep
+
+# Environment variables & secrets
+.env
+.env.*
+
+# Logs & Temporary files
+*.tmp
+*.log
+logs/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE & Editor files
+.vscode/
+.idea/
+.kiro/
+*.swp
+*.swo
+
+# OS System files
+.DS_Store
+Thumbs.db
