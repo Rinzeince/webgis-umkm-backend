@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,8 +88,14 @@
             gap: 0.75rem;
         }
 
+        .btn-subgroup {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
         @media (min-width: 480px) {
-            .btn-group {
+            .btn-subgroup {
                 flex-direction: row;
             }
         }
@@ -114,6 +121,19 @@
 
         .btn-primary:hover {
             background-color: var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(0, 104, 74, 0.4);
+        }
+
+        .btn-info {
+            background-color: #1e293b;
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .btn-info:hover {
+            background-color: rgba(56, 189, 248, 0.12);
+            border-color: #38bdf8;
+            color: #7dd3fc;
         }
 
         .btn-secondary {
@@ -124,6 +144,7 @@
 
         .btn-secondary:hover {
             background-color: #374151;
+            color: #ffffff;
         }
 
         .footer-note {
@@ -133,12 +154,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="card">
-        <div class="badge">
+        <!-- <div class="badge">
             <span class="pulse-dot"></span>
             Backend API & GIS Engine Active
-        </div>
+        </div> -->
 
         <h1>SIGAP UMKM KBB</h1>
         <p>Sistem Informasi Geografis Pemetaan & Analysis Clustering K-Means Sektor UMKM Kabupaten Bandung Barat.</p>
@@ -147,9 +169,14 @@
             <a href="/admin" class="btn btn-primary">
                 🔑 Panel Admin Dashboard
             </a>
-            <a href="http://localhost:5173" target="_blank" class="btn btn-secondary">
-                🌐 WebGIS Frontend App
-            </a>
+            <div class="btn-subgroup">
+                <a href="{{ route('api.docs') }}" class="btn btn-info">
+                    📖 API Documentation
+                </a>
+                <a href="{{ env('FRONTEND_URL', 'http://localhost:5173') }}" target="_blank" class="btn btn-secondary">
+                    🌐 WebGIS Frontend
+                </a>
+            </div>
         </div>
 
         <div class="footer-note">
@@ -157,4 +184,5 @@
         </div>
     </div>
 </body>
+
 </html>
