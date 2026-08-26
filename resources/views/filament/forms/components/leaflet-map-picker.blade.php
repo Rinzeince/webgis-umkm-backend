@@ -55,17 +55,17 @@
                 preferCanvas: true
             }).setView([defaultLat, defaultLng], initialZoom);
 
-            // Opsi 1: Esri Light Gray Canvas (Cadangan / Bebas API Key)
-            // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-            //     attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-            //     maxZoom: 18
-            // }).addTo(this.map);
-
-            // Opsi 2: CARTO Light Basemap (Aktif dengan API Key)
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?api_key=eyJhbGciOiJIUzI1NiJ9.eyJhIjoiYWNfajEyNXN5cTEiLCJqdGkiOiJmOTllNmM4NiIsImV4cCI6MTgxOTI5NTUyMH0.6SkCRPb29xLr8sThlB0PnmIIbXtu0RHQ5JIpsXvv9Ak', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                maxZoom: 19
+            // Opsi 1: Esri Light Gray Canvas (Aktif / Bebas API Key)
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+                maxZoom: 18
             }).addTo(this.map);
+
+            // Opsi 2: CARTO Light Basemap (Cadangan / Memerlukan API Key)
+            // L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?api_key=', {
+            //     attribution: '&copy; OpenStreetMap &copy; CARTO',
+            //     maxZoom: 19
+            // }).addTo(this.map);
 
             // Load GeoJSON Polygons for Kecamatan Boundaries
             fetch('/geojson/kecamatan_kbb.geojson')
