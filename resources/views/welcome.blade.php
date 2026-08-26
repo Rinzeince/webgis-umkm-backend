@@ -170,7 +170,8 @@
                 <a href="/admin" class="btn btn-primary">
                     🔑 Panel Admin Dashboard
                 </a>
-                <a href="{{ env('FRONTEND_URL', 'http://localhost:5173') }}" target="_blank" class="btn btn-secondary">
+                <a href="{{ env('FRONTEND_URL', 'https://webgis-umkm-frontend.vercel.app') }}" target="_blank"
+                    class="btn btn-secondary">
                     🌐 WebGIS Frontend
                 </a>
             </div>
