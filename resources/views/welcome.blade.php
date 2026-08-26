@@ -166,17 +166,17 @@
         <p>Sistem Informasi Geografis Pemetaan & Analysis Clustering K-Means Sektor UMKM Kabupaten Bandung Barat.</p>
 
         <div class="btn-group">
-            <a href="/admin" class="btn btn-primary">
-                🔑 Panel Admin Dashboard
-            </a>
             <div class="btn-subgroup">
-                <a href="{{ route('api.docs') }}" class="btn btn-info">
-                    📖 API Documentation
+                <a href="/admin" class="btn btn-primary">
+                    🔑 Panel Admin Dashboard
                 </a>
                 <a href="{{ env('FRONTEND_URL', 'http://localhost:5173') }}" target="_blank" class="btn btn-secondary">
                     🌐 WebGIS Frontend
                 </a>
             </div>
+            <a href="{{ route('api.docs') }}" class="btn btn-info">
+                📖 API Documentation
+            </a>
         </div>
 
         <div class="footer-note">
