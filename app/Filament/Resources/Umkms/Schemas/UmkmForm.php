@@ -6,6 +6,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\TimePicker;
 use Filament\Forms\Components\ViewField;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
@@ -52,10 +53,14 @@ class UmkmForm
                                 TextInput::make('kontak')
                                     ->label('Kontak / No. Telp')
                                     ->maxLength(50),
-                                TextInput::make('jam_operasional')
-                                    ->label('Jam Operasional')
-                                    ->placeholder('Misal: 08:00 - 17:00')
-                                    ->maxLength(100),
+                                TimePicker::make('jam_buka')
+                                    ->label('Jam Buka')
+                                    ->seconds(false)
+                                    ->placeholder('08:00'),
+                                TimePicker::make('jam_tutup')
+                                    ->label('Jam Tutup')
+                                    ->seconds(false)
+                                    ->placeholder('17:00'),
                             ]),
                         Textarea::make('alamat_lengkap')
                             ->label('Alamat Lengkap')

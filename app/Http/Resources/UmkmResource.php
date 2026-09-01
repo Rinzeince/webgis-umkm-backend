@@ -13,6 +13,11 @@ class UmkmResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $jamOperasional = null;
+        if ($this->jam_buka && $this->jam_tutup) {
+            $jamOperasional = substr($this->jam_buka, 0, 5) . ' - ' . substr($this->jam_tutup, 0, 5) . ' WIB';
+        }
+
         return [
             'id_umkm' => $this->id_umkm,
             'nama_umkm' => $this->nama_umkm,
@@ -22,7 +27,9 @@ class UmkmResource extends JsonResource
             'foto_url' => $this->foto_url,
             'kontak' => $this->kontak,
             'status_operasional' => $this->status_operasional,
-            'jam_operasional' => $this->jam_operasional,
+            'jam_buka' => $this->jam_buka ? substr($this->jam_buka, 0, 5) : null,
+            'jam_tutup' => $this->jam_tutup ? substr($this->jam_tutup, 0, 5) : null,
+            'jam_operasional' => $jamOperasional,
             'kecamatan' => $this->whenLoaded('kecamatan', function () {
                 return [
                     'id_kecamatan' => $this->kecamatan->id_kecamatan,

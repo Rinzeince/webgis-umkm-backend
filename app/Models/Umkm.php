@@ -24,7 +24,8 @@ class Umkm extends Model
         'foto_url',
         'kontak',
         'status_operasional',
-        'jam_operasional',
+        'jam_buka',
+        'jam_tutup',
     ];
 
     protected $casts = [

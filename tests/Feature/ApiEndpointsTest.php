@@ -86,6 +86,8 @@ class ApiEndpointsTest extends TestCase
             'latitude' => -6.81700000,
             'longitude' => 107.61700000,
             'status_operasional' => 'aktif',
+            'jam_buka' => '08:00:00',
+            'jam_tutup' => '17:00:00',
         ]);
 
         $user = User::create([

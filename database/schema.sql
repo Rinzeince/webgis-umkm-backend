@@ -83,7 +83,8 @@ CREATE TABLE umkm (
   status_operasional ENUM('aktif','nonaktif') DEFAULT 'aktif',
   -- 'aktif'   = UMKM beroperasi, dihitung di agregat & tampil di WebGIS
   -- 'nonaktif'= UMKM tidak beroperasi, DIKECUALIKAN dari agregat & WebGIS publik
-  jam_operasional VARCHAR(100) NULL,
+  jam_buka TIME NULL,                       -- Jam mulai operasional
+  jam_tutup TIME NULL,                      -- Jam selesai operasional
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   INDEX idx_status_nama (status_operasional, nama_umkm),

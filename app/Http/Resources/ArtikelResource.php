@@ -43,6 +43,7 @@ class ArtikelResource extends JsonResource
             'thumbnail_url' => $thumbnail,
             'penulis' => $this->penulis ?? $this->author?->name ?? 'Admin',
             'author' => $this->penulis ?? $this->author?->name ?? 'Admin',
+            'is_published' => (bool) $this->is_published,
             'published_at' => $this->published_at?->translatedFormat('d M Y') ?? $this->created_at?->translatedFormat('d M Y'),
             'created_at' => $this->created_at?->toIso8601String(),
         ];
